@@ -1,0 +1,71 @@
+<ScrollView
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:id="@+id/login_form"
+	tools:context="ru.vlad805.mapssharedpoints.MainActivity">
+	<LinearLayout
+		android:padding="10dp"
+		android:orientation="vertical"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content">
+		<LinearLayout
+			android:orientation="vertical"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			style="@style/App.LoginItem">
+			<TextView
+				style="@style/Theme.Standart.Label"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:text="@string/LoginLogin" />
+			<EditText
+				android:inputType="text"
+				android:lines="1"
+				style="@style/Theme.Standart.Field"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:id="@+id/login_login_value" />
+		</LinearLayout>
+		<LinearLayout
+			android:orientation="vertical"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			style="@style/App.LoginItem">
+			<TextView
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				style="@style/Theme.Standart.Label"
+				android:text="@string/LoginPassword" />
+			<EditText
+				android:inputType="textPassword"
+				android:lines="1"
+				style="@style/Theme.Standart.Field"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:id="@+id/login_password_value" />
+		</LinearLayout>
+		<Button
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:id="@+id/login_submit"
+			android:onClick="authorize"
+			style="@style/App.StyledButton"
+			android:text="@string/LoginEnter" />
+		<Button
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:id="@+id/login_registration"
+			android:onClick="register"
+			style="@style/App.StyledButton"
+			android:text="@string/LoginRegister" />
+		<Button
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:id="@+id/login_registrationVK"
+			android:onClick="registerVK"
+			style="@style/App.StyledButton"
+			android:text="@string/LoginRegisterVK" />
+	</LinearLayout>
+</ScrollView>

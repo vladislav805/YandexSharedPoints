@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- From: file:/E:/Android/Studio/YandexSharedPoints/yandexSharedPoints/build/intermediates/exploded-aar/com.vk/androidsdk/1.5.1/res/values-w600dp-v13/values.xml -->
+    <eat-comment/>
+    <dimen name="vk_share_dialog_view_padding">100dp</dimen>
+</resources>

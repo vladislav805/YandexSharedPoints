@@ -1,0 +1,67 @@
+<ScrollView
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:padding="10dp"
+	xmlns:android="http://schemas.android.com/apk/res/android">
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical">
+		<TextView
+			android:id="@+id/point_description"
+			android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+			android:textColor="@android:color/white"
+			android:textSize="16sp"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			style="@style/App.EditViewItem"
+			android:paddingBottom="15dp" />
+		<TextView
+			android:id="@+id/point_created"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			style="@style/App.EditViewItem" />
+		<TextView
+			android:id="@+id/point_updated"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			style="@style/App.EditViewItem" />
+		<TextView
+			android:id="@+id/point_visited"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			style="@style/App.EditViewItem" />
+		<!--TextView
+			android:id="@+id/point_public"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			style="@style/App.ItemLabel" /-->
+		<LinearLayout
+			android:orientation="horizontal"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="end">
+			<Button
+				android:id="@+id/point_visit"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@string/PointVisit"
+				android:onClick="visitPoint"
+				style="@style/App.StyledButton" />
+			<Button
+				android:id="@+id/point_edit"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@string/PointEdit"
+				android:onClick="editPoint"
+				style="@style/App.StyledButton" />
+			<Button
+				android:id="@+id/point_delete"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@string/PointDelete"
+				android:onClick="deletePoint"
+				style="@style/App.StyledButton" />
+		</LinearLayout>
+	</LinearLayout>
+</ScrollView><!-- From: file:/E:/Android/Studio/YandexSharedPoints/yandexSharedPoints/src/main/res/layout/activity_point.xml -->

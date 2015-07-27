@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Точки Яндекс.Карт</string>
+    <string name="hello_world" translatable="false">null</string>
+    
+    <string name="title_activity_settings">Настройки</string>
+
+    <!-- Login -->
+
+    <string name="LoginLogin">Логин</string>
+    <string name="LoginPassword">Пароль</string>
+    <string name="LoginEnter">Авторизация</string>
+
+    <!-- Create -->
+
+    <string name="CreateTitle">Название точки</string>
+    <string name="CreateDescription">Описание</string>
+    <string name="CreateSubmit">Создать</string>
+    <string name="CreateIsPublic">Публичная точка</string>
+
+    <!-- Point Activity -->
+
+    <string name="PointVisit">Посещён.</string>
+    <string name="PointEdit">Изменить</string>
+    <string name="PointDelete">Удалить</string>
+
+    <!-- Map -->
+
+    <string name="MapStatusSyncronization">Синхронизация&#8230;</string>
+    <string name="MapStatusSynced">Синхронизировано</string>
+    <string name="MapStatusError">Ошибка</string>
+    <string name="action_list">Все точки</string>
+    <string name="action_settings">Настройки</string>
+    <string name="action_sync">Синхронизировать</string>
+    <string name="action_logout">Выход из аккаунта</string>
+    
+    <!-- Settings -->
+    
+    <string name="SettingsNight">Ночная карта</string>
+    <string name="SettingsMapHD">HD карта</string>
+    <string name="SettingsTraffic">Показывать пробки</string>
+    <string name="SettingsLocation">Показывать мое местоположение</string>
+	<string name="title_activity_list">ListActivity</string>
+	<string name="title_activity_edit_point">EditPointActivity</string>
+    <string name="EditSubmit">Редактировать</string>
+	<string name="title_activity_about">AboutActivity</string>
+    <string name="action_about">О приложении</string>
+    <string name="no">Нет</string>
+    <string name="yes">Да</string>
+    <string name="about_check_updates">Проверить обновления</string>
+    <string name="about_what_new">Что нового?</string>
+    <string name="close">Закрыть</string>
+	<string name="title_activity_profile">Profile</string>
+    <string name="sync">Синхронизация...</string>
+    <string name="logouting">Выход...</string>
+    <string name="actions">Действия</string>
+	<string name="confirm">Подтверждение</string>
+	<string name="confirm_delete_point">Вы уверены, что хотите удалить эту точку?</string>
+	<string name="action_copied">Ссылка скопирована</string>
+	<string name="action_create_sharing">Создание приватной ссылки...</string>
+	<string name="action_share_point_link">Отправить ссылку на точку используя...</string>
+	<string name="profile_unsupported_link">Incorrect link</string>
+	<string name="profile_loading">Loading...</string>
+	<string name="action_profile">Профиль</string>
+    <string name="profile_online">Online</string>
+    <string name="profile_was_back">назад</string>
+    <string name="profile_button_openMap">Open map</string>
+
+    <string-array name="point_actions">
+        <item>Поделиться</item>
+        <item>Редактировать</item>
+        <item>Удалить</item>
+    </string-array>
+	<string name="title_activity_intent_resolver">IntentResolver</string>
+    <string name="resolver">This is techincal activity. If you see this activity, it\'s means, that someone goes wrong...</string>
+    <string name="resolver_not_supported">Неподдерживаемый формат ссылки</string>
+    <string name="settings_application">Application</string>
+    <string name="settings_profile">Profile</string>
+    <string name="login_process">Loading...</string>
+    <string name="login_gettingUser">Getting user...</string>
+    <string name="login_welcome">Welcome, %1$s</string>
+    <string name="profile_firstName">First name</string>
+    <string name="profile_lastName">Last name</string>
+    <string name="profile_login">Login</string>
+    <string name="profile_save">Save</string>
+    <string name="profile_sex_female">female</string>
+    <string name="profile_sex_male">male</string>
+    <string name="profile_sex">Sex</string>
+    <string name="profile_error_empty">You have empty fields!</string>
+    <string name="profile_saving">Saving...</string>
+    <string name="profile_settings_saved">Settings successfully saved</string>
+    <string name="point_saved">Saved</string>
+    <string name="logout_failed">Destroying session failed</string>
+    <string name="point_deleted">Point deleted</string>
+    <string name="point_created">Successfully created</string>
+    <string name="point_create_empty_title">Please, enter title of point</string>
+    <string name="about_checking_updates">Checking updates...</string>
+    <string name="about_update_title">New version!</string>
+    <string name="about_update_description">New version already available\\nv%1$s (buildId=%2$d)\\n\\nWhat\\\'s new?\\n%3$s\\n\\nGo to download?</string>
+    <string name="about_update_not_found">Новых версий нет\\nАктуальная версия: %1$s (buildId=%2$d)</string>
+    <string name="profile_action_settings">Edit info</string>
+    <string name="profile_action_add_friend">Add to friends</string>
+	<string name="title_activity_register">Registration</string>
+    <string name="register_do">Create account</string>
+    <string name="profile_password">Password</string>
+    <string name="register_request">Registration...</string>
+    <string name="register_success">Registration proccess finished successfully. Now you can login in your account.</string>
+    <string name="LoginRegister">Registration</string>
+    <string name="LoginRegisterVK">Auth via VK</string>
+
+</resources>

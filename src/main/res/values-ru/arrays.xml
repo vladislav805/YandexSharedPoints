@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string-array name="profile_was">
+		<item>было онлайн</item>
+		<item>была онлайн</item>
+		<item>был онлайн</item>
+	</string-array>
+	<string-array name="days">
+		<item>день</item>
+		<item>дня</item>
+		<item>дней</item>
+	</string-array>
+	<string-array name="hours">
+		<item>час</item>
+		<item>часа</item>
+		<item>часов</item>
+	</string-array>
+	<string-array name="minutes">
+		<item>минуту</item>
+		<item>минуты</item>
+		<item>минут</item>
+	</string-array>
+</resources>

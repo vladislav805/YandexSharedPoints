@@ -1,0 +1,62 @@
+<resources>
+	<style name="Theme.ActionBarNoShadow" parent="style/Widget.AppCompat.ActionBar.Solid">
+		<item name="android:elevation">0dp</item>
+		<item name="elevation">0dp</item>
+	</style>
+
+	<style name="Theme.App" parent="Theme.AppCompat">
+		<item name="android:statusBarColor">@android:color/transparent</item>
+		<item name="android:colorPrimary">@android:color/transparent</item>
+		<item name="android:colorPrimaryDark">@android:color/transparent</item>
+
+		<item name="android:windowContentOverlay">@null</item>
+		<item name="windowActionBarOverlay">true</item>
+		<item name="colorPrimary">@color/ActionBarBackground</item>
+		<item name="colorPrimaryDark">@color/StatusBarBackground</item>
+		<item name="android:textColorPrimary">@android:color/white</item>
+		<item name="android:windowTranslucentNavigation">true</item>
+		<item name="android:windowTranslucentStatus">true</item>
+		<item name="android:textColor">@android:color/white</item>
+	</style>
+	<color name="ActionBarBackground">#5000</color>
+	<color name="StatusBarBackground">#4000</color>
+	<style name="Theme.Dialog.NoTitle" parent="@style/Theme.AppCompat.Dialog.Alert">
+		<item name="android:windowNoTitle">true</item>
+		<item name="windowActionBar">false</item>
+	</style>
+
+	<!-- Login -->
+
+	<color name="LoginPrimaryColor">#3F51B5</color>
+	<color name="LoginPrimaryDarkColor">#303F9F</color>
+	<color name="LoginBackgroundColor">#E9E9E9</color>
+
+	<color name="ButtonBackgroundColor">#1976D2</color>
+	<color name="ButtonTextColor">@android:color/black</color>
+
+	<style name="Theme.Standart" parent="Theme.AppCompat.Light">
+		<item name="actionBarStyle">@style/Theme.ActionBarNoShadow</item>
+		<item name="android:windowContentOverlay">@null</item>
+		<item name="android:textColorPrimary">@android:color/white</item>
+		<item name="colorPrimary">@color/LoginPrimaryColor</item>
+		<item name="colorPrimaryDark">@color/LoginPrimaryDarkColor</item>
+		<item name="android:windowBackground">@color/LoginBackgroundColor</item>
+	</style>
+	<style name="Theme.Standart.Label">
+		<item name="android:textColor">@android:color/black</item>
+	</style>
+	<style name="Theme.Standart.Field" parent="Widget.AppCompat.EditText">
+		<item name="android:textColor">@android:color/black</item>
+	</style>
+	<style name="Theme.Standart.Field.Settings" parent="Theme.Standart.Field">
+
+	</style>
+	<style name="Theme.Button" parent="Widget.AppCompat.Button.Borderless">
+		<item name="android:colorPrimary">@color/ButtonBackgroundColor</item>
+		<item name="android:textColor">@color/ButtonTextColor</item>
+		<item name="android:paddingTop">16dp</item>
+		<item name="android:paddingBottom">16dp</item>
+		<item name="android:paddingLeft">28dp</item>
+		<item name="android:paddingRight">28dp</item>
+	</style>
+</resources>

@@ -1,0 +1,15 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:padding="10dp"
+	tools:context="ru.vlad805.mapssharedpoints.AboutActivity">
+
+	<Button
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		style="@style/Theme.Button"
+		android:onClick="checkUpdates"
+		android:text="@string/about_check_updates" />
+
+</LinearLayout>
