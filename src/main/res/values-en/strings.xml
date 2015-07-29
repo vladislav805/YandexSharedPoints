@@ -83,4 +83,9 @@
 	<string name="register_success">Registration proccess finished successfully. Now you can login in your account.</string>
 	<string name="LoginRegister">Registration</string>
 	<string name="LoginRegisterVK">Auth via VK</string>
+	<string name="translation_notification_title">Translation your location</string>
+	<string name="translation_notification_last_request">Last sending position:</string>
+	<string name="translation_start">Start translation</string>
+	<string name="translation_stop">Stop translation</string>
+	<string name="action_translation">Translate my location</string>
 </resources>

@@ -48,7 +48,7 @@ public class API {
 			try {
 				buffer = request.send(url[0], url[1]);
 			} catch (NotAvailableInternetException e) {
-				e.printStackTrace();
+				Log.e("API.AsyncLoadData", "NoAvailableInternetException: У вас соединение с интернетом, случаем, не пропало?");
 				publishProgress(-1);
 			}
 			return buffer;
@@ -62,6 +62,8 @@ public class API {
 
 		@Override
 		protected void onPostExecute (String r) {
+			if (r == null)
+				return;
 			Log.i("APIRequestResult<" + method + ">", r);
 			result = Json.read(r);
 			result = result.at(Const.RESPONSE);

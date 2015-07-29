@@ -7,46 +7,59 @@ public class Settings {
 	private boolean isTraffic = false;
 	private boolean isMyLocation = true;
 	private boolean isHD = true;
+	private int trackerInterval = 5;
 	private Context context;
 	
 	public Settings (Context context) {
 		this.context = context;
-		this.isNight = Utils.getBoolean(context, Const.Settings.IS_NIGHT);
-		this.isTraffic = Utils.getBoolean(context, Const.Settings.IS_TRAFFIC);
-		this.isMyLocation = Utils.getBoolean(context, Const.Settings.IS_LOCATION);
-		this.isHD = Utils.getBoolean(context, Const.Settings.IS_HD);
+		isNight = Utils.getBoolean(context, Const.Settings.IS_NIGHT);
+		isTraffic = Utils.getBoolean(context, Const.Settings.IS_TRAFFIC);
+		isMyLocation = Utils.getBoolean(context, Const.Settings.IS_LOCATION);
+		isHD = Utils.getBoolean(context, Const.Settings.IS_HD);
+		//trackerInterval = Utils.getInt(context, Const.Settings.TRACKER_INTERVAL);
 	}
+
 	public Settings setNight (boolean state) {
-		this.isNight = state;
-		this.reWrite();
+		isNight = state;
+		reWrite();
 		return this;
 	}
+
 	public Settings setTraffic (boolean state) {
-		this.isTraffic = state;
-		this.reWrite();
+		isTraffic = state;
+		reWrite();
 		return this;
 	}
+
 	public Settings setMyLocation (boolean state) {
-		this.isMyLocation = state;
-		this.reWrite();
+		isMyLocation = state;
+		reWrite();
 		return this;
 	}
+
 	public Settings setHD (boolean state) {
-		this.isHD = state;
-		this.reWrite();
+		isHD = state;
+		reWrite();
+		return this;
+	}
+
+	public Settings setTrackerInterval (int interval) {
+		trackerInterval = interval;
+		reWrite();
 		return this;
 	}
 	
-	public boolean getIsNight () {return this.isNight;}
-	public boolean getIsTraffic () {return this.isTraffic;}
-	public boolean getIsMyLocation () {return this.isMyLocation;}
-	public boolean getIsHD () {return this.isHD;}
+	public boolean getIsNight () {return isNight;}
+	public boolean getIsTraffic () {return isTraffic;}
+	public boolean getIsMyLocation () {return isMyLocation;}
+	public boolean getIsHD () {return isHD;}
+	public int getTrackerInterval () {return trackerInterval;}
 
 	public Settings reWrite () {
-		Utils.setBoolean(context, Const.Settings.IS_NIGHT, this.isNight);
-		Utils.setBoolean(context, Const.Settings.IS_TRAFFIC, this.isTraffic);
-		Utils.setBoolean(context, Const.Settings.IS_LOCATION, this.isMyLocation);
-		Utils.setBoolean(context, Const.Settings.IS_HD, this.isHD);
+		Utils.setBoolean(context, Const.Settings.IS_NIGHT, isNight);
+		Utils.setBoolean(context, Const.Settings.IS_TRAFFIC, isTraffic);
+		Utils.setBoolean(context, Const.Settings.IS_LOCATION, isMyLocation);
+		Utils.setBoolean(context, Const.Settings.IS_HD, isHD);
 		return this;
 	}
 }

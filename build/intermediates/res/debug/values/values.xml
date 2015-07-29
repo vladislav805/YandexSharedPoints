@@ -279,6 +279,7 @@
     <string name="action_settings">Настройки</string>
     <string name="action_share_point_link">Отправить ссылку на точку используя...</string>
     <string name="action_sync">Синхронизировать</string>
+    <string name="action_translation">Translate my location</string>
     <string name="actions">Действия</string>
     <string name="app_name">Точки Яндекс.Карт</string>
     <string name="close">Закрыть</string>
@@ -333,6 +334,11 @@
     <string name="title_activity_profile">Profile</string>
     <string name="title_activity_register">Registration</string>
     <string name="title_activity_settings">Настройки</string>
+    <string name="title_activity_translation">Translation</string>
+    <string name="translation_notification_last_request">Last sending position:</string>
+    <string name="translation_notification_title">Translation your location</string>
+    <string name="translation_start">Start translation</string>
+    <string name="translation_stop">Stop translation</string>
     <!-- From: file:/E:/Android/Studio/YandexSharedPoints/yandexSharedPoints/build/intermediates/exploded-aar/com.vk/androidsdk/1.5.1/res/values/values.xml -->
     <eat-comment/>
     <string name="vk_enter_captcha_text">Enter captcha text here</string>

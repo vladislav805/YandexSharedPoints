@@ -1,0 +1,14 @@
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	tools:context="ru.vlad805.mapssharedpoints.TranslationActivity">
+	<Button
+		android:id="@+id/translation_switcher"
+		android:text="@string/translation_start"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"/>
+</LinearLayout>
+<!-- From: file:/E:/Android/Studio/YandexSharedPoints/yandexSharedPoints/src/main/res/layout/activity_translation.xml -->

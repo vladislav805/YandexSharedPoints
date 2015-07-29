@@ -11,6 +11,10 @@
 		app:showAsAction="never"
 		android:title="@string/action_profile"/>
 	<item
+		android:id="@+id/action_translation"
+		app:showAsAction="never"
+		android:title="@string/action_translation"/>
+	<item
 		android:id="@+id/action_settings"
 		app:showAsAction="never"
 		android:title="@string/action_settings"/>

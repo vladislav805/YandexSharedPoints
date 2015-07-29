@@ -45,25 +45,25 @@ public final class R {
 		public static final int ymk_zoom_plus_pressed = 0x7f02006f;
 	}
 	public static final class id {
-		public static final int ymk_balloon_text_view = 0x7f0d009f;
-		public static final int ymk_find_me = 0x7f0d00a6;
-		public static final int ymk_scale = 0x7f0d00a2;
-		public static final int ymk_screen_buttons_bottom = 0x7f0d00a1;
-		public static final int ymk_screen_buttons_top = 0x7f0d00a0;
-		public static final int ymk_semaphore = 0x7f0d00a3;
-		public static final int ymk_zoom_in = 0x7f0d00a4;
-		public static final int ymk_zoom_out = 0x7f0d00a5;
+		public static final int ymk_balloon_text_view = 0x7f0d00a0;
+		public static final int ymk_find_me = 0x7f0d00a7;
+		public static final int ymk_scale = 0x7f0d00a3;
+		public static final int ymk_screen_buttons_bottom = 0x7f0d00a2;
+		public static final int ymk_screen_buttons_top = 0x7f0d00a1;
+		public static final int ymk_semaphore = 0x7f0d00a4;
+		public static final int ymk_zoom_in = 0x7f0d00a5;
+		public static final int ymk_zoom_out = 0x7f0d00a6;
 	}
 	public static final class layout {
-		public static final int ymk_balloon_default_layout = 0x7f030033;
-		public static final int ymk_screen_buttons_layout = 0x7f030034;
+		public static final int ymk_balloon_default_layout = 0x7f030034;
+		public static final int ymk_screen_buttons_layout = 0x7f030035;
 	}
 	public static final class string {
-		public static final int ymk_findme_not_found = 0x7f06006e;
-		public static final int ymk_kilometers_short = 0x7f06006f;
-		public static final int ymk_lang = 0x7f060070;
-		public static final int ymk_meters_short = 0x7f060071;
-		public static final int ymk_my_place = 0x7f060072;
+		public static final int ymk_findme_not_found = 0x7f060074;
+		public static final int ymk_kilometers_short = 0x7f060075;
+		public static final int ymk_lang = 0x7f060076;
+		public static final int ymk_meters_short = 0x7f060077;
+		public static final int ymk_my_place = 0x7f060078;
 	}
 	public static final class xml {
 		public static final int ymk_map_layers = 0x7f050000;

@@ -116,6 +116,15 @@
             android:name="com.vk.sdk.VKServiceActivity"
             android:label="ServiceActivity"
             android:theme="@style/VK.Transparent" />
+        <activity
+            android:name="ru.vlad805.mapssharedpoints.TranslationActivity"
+            android:label="@string/title_activity_translation" >
+        </activity>
+
+        <service
+            android:name="ru.vlad805.mapssharedpoints.TranslationService"
+            android:process=":ServiceTranslation" >
+        </service>
     </application>
 
 </manifest>

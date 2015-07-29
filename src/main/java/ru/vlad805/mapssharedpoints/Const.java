@@ -38,6 +38,16 @@ final public class Const {
 	final public static String PHOTO_50 = "photo_50";
 	final public static String PHOTO_200 = "photo_200";
 	final public static String PHOTO_ORIGINAL = "photo_original";
+	final public static String SPEED = "speed";
+	final public static String ACCURACY = "accuracy";
+	final public static String ALTITUDE = "altitude";
+	final public static String TIME = "time";
+	final public static String PROVIDER = "provider";
+	final public static String BEARING = "bearing";
+	final public static String TIMEOUT = "timeout";
+	final public static String BATTERY = "battery";
+	final public static String TEMPERATURE = "temperature";
+	final public static String NETWORK = "network";
 	final public static String APPLICATION_ID = "applicationId";
 	final public static String BUILD_ID = "buildId";
 	final public static String IS_OLD = "isOld";
@@ -49,6 +59,7 @@ final public class Const {
 	final public static String RESULT = "result";
 	final public static String LIST_OPEN_POINT_ID = "_openPointFromList";
 	final public static String IS_NOT_OWNER = "_notOwner";
+	final public static String IS_VK = "_isVK";
 
 	final class API {
 		final public static String login = "online.login";
@@ -65,6 +76,7 @@ final public class Const {
 		final public static String sharePoint = "online.sharePoint";
 		final public static String deletePoint = "online.deletePoint";
 		final public static String checkUpdates = "apps.checkUpdates";
+		final public static String setPlace = "online.setPlace";
 	}
 
 	final class Settings {
@@ -72,8 +84,8 @@ final public class Const {
 		final public static String IS_TRAFFIC = "s_traffic";
 		final public static String IS_LOCATION = "s_location";
 		final public static String IS_HD = "s_hd";
+		final public static String TRACKER_INTERVAL = "s_tracker_interval";
 		final public static String TAB_PROFILE = "_tabProfile";
+		final public static int SEND_AS_LOCATION = -2;
 	}
-
-	final public static String IS_VK = "_isVK";
 }

@@ -242,6 +242,11 @@ public class MapActivity extends ExtendedActivity {
 				startActivity(intent);
 				break;
 
+			case R.id.action_translation:
+				intent = new Intent(this, TranslationActivity.class);
+				startActivity(intent);
+				break;
+
 			case R.id.action_sync:
 				sync();
 				break;
