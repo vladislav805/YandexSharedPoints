@@ -20,4 +20,15 @@
 		<item>minutes</item>
 		<item>minutes</item>
 	</string-array>
+	<string-array name="settings_intervals">
+		<item>As location</item>
+		<item>1 second</item>
+		<item>2 seconds</item>
+		<item>3 seconds</item>
+		<item>5 seconds</item>
+		<item>10 seconds</item>
+		<item>15 seconds</item>
+		<item>30 seconds</item>
+		<item>60 seconds</item>
+	</string-array>
 </resources>

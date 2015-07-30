@@ -45,14 +45,14 @@ public final class R {
 		public static final int ymk_zoom_plus_pressed = 0x7f02006f;
 	}
 	public static final class id {
-		public static final int ymk_balloon_text_view = 0x7f0d00a0;
-		public static final int ymk_find_me = 0x7f0d00a7;
-		public static final int ymk_scale = 0x7f0d00a3;
-		public static final int ymk_screen_buttons_bottom = 0x7f0d00a2;
-		public static final int ymk_screen_buttons_top = 0x7f0d00a1;
-		public static final int ymk_semaphore = 0x7f0d00a4;
-		public static final int ymk_zoom_in = 0x7f0d00a5;
-		public static final int ymk_zoom_out = 0x7f0d00a6;
+		public static final int ymk_balloon_text_view = 0x7f0d00a1;
+		public static final int ymk_find_me = 0x7f0d00a8;
+		public static final int ymk_scale = 0x7f0d00a4;
+		public static final int ymk_screen_buttons_bottom = 0x7f0d00a3;
+		public static final int ymk_screen_buttons_top = 0x7f0d00a2;
+		public static final int ymk_semaphore = 0x7f0d00a5;
+		public static final int ymk_zoom_in = 0x7f0d00a6;
+		public static final int ymk_zoom_out = 0x7f0d00a7;
 	}
 	public static final class layout {
 		public static final int ymk_balloon_default_layout = 0x7f030034;

@@ -8,6 +8,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
+import java.util.HashMap;
+
 public class TranslationActivity extends ExtendedActivity implements View.OnClickListener {
 
 	private Settings settings;
@@ -26,9 +28,9 @@ public class TranslationActivity extends ExtendedActivity implements View.OnClic
 		bSwitcher = (Button) findViewById(R.id.translation_switcher);
 		bSwitcher.setOnClickListener(this);
 
-		Log.e("TRACT", TranslationService.mState.toString());
 
-		if (TranslationService.mState == StateService.RUNNING) {
+
+		if (TranslationService.getState()) {
 			isStarted = true;
 			updateUi();
 		}

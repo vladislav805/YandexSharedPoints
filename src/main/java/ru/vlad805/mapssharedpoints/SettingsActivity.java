@@ -3,6 +3,7 @@ package ru.vlad805.mapssharedpoints;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
@@ -10,21 +11,24 @@ import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.Spinner;
 import android.widget.TabHost;
 import java.util.HashMap;
 import mjson.Json;
 
-public class SettingsActivity extends ExtendedActivity implements View.OnClickListener, OnCheckedChangeListener {
+public class SettingsActivity extends ExtendedActivity implements View.OnClickListener, OnCheckedChangeListener, AdapterView.OnItemSelectedListener {
 	
 	final public static int iNight = R.id.settings_night;
 	final public static int iHD = R.id.settings_hd;
 	final public static int iTraffic = R.id.settings_traffic;
 	final public static int iLocation = R.id.settings_location;
+	final public static int iInterval = R.id.settings_interval_translation;
 
 	private EditText editViewFirstName;
 	private EditText editViewLastName;
 	private EditText editViewLogin;
 	private RadioGroup rgSex;
+	private Spinner spinner;
 
 	private Settings settings;
 	private User user;
@@ -44,11 +48,14 @@ public class SettingsActivity extends ExtendedActivity implements View.OnClickLi
 		CheckBox settingHD = (CheckBox) findViewById(iHD);
 		CheckBox settingTraffic = (CheckBox) findViewById(iTraffic);
 		CheckBox settingLocation = (CheckBox) findViewById(iLocation);
+		spinner = (Spinner) findViewById(iInterval);
+
 
 		editViewFirstName = (EditText) findViewById(R.id.profile_firstName);
 		editViewLastName = (EditText) findViewById(R.id.profile_lastName);
 		editViewLogin = (EditText) findViewById(R.id.profile_login);
 		rgSex = (RadioGroup) findViewById(R.id.profile_sex);
+
 		RadioButton rbSexFemale = (RadioButton) findViewById(R.id.profile_sex_female);
 		RadioButton rbSexMale = (RadioButton) findViewById(R.id.profile_sex_male);
 		Button profileSubmit = (Button) findViewById(R.id.profile_submit);
@@ -57,11 +64,13 @@ public class SettingsActivity extends ExtendedActivity implements View.OnClickLi
 		settingHD.setOnCheckedChangeListener(this);
 		settingTraffic.setOnCheckedChangeListener(this);
 		settingLocation.setOnCheckedChangeListener(this);
+		spinner.setOnItemSelectedListener(this);
 		
 		settingNight.setChecked(settings.getIsNight());
 		settingHD.setChecked(settings.getIsHD());
 		settingTraffic.setChecked(settings.getIsTraffic());
 		settingLocation.setChecked(settings.getIsMyLocation());
+		spinner.setSelection(getIndexOfSelectedInterval(settings.getTrackerInterval()));
 
 		editViewLogin.setText(user.login);
 		editViewFirstName.setText(user.firstName);
@@ -94,6 +103,22 @@ public class SettingsActivity extends ExtendedActivity implements View.OnClickLi
 			}
 		}
 	}
+
+	private int getIndexOfSelectedInterval (int interval) {
+		switch (interval) {
+			case -2: return 0;
+			case 1: return 1;
+			case 2: return 2;
+			case 3: return 3;
+			case 5: return 4;
+			case 10: return 5;
+			case 15: return 6;
+			case 30: return 7;
+			case 60: return 8;
+			default: return -1;
+		}
+	}
+
 	@Override
 	public void onClick (View v) {
 		switch (v.getId()) {
@@ -164,5 +189,23 @@ public class SettingsActivity extends ExtendedActivity implements View.OnClickLi
 			finish();
 		}
 		return super.onOptionsItemSelected(item);
+	}
+
+	@Override
+	public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+		String[] value = spinner.getSelectedItem().toString().split(" ");
+		int index;
+		try {
+			index = Integer.valueOf(value[0]);
+		} catch (Exception e) {
+			index = -2;
+		}
+
+		settings.setTrackerInterval(index);
+	}
+
+	@Override
+	public void onNothingSelected(AdapterView<?> parent) {
+
 	}
 }

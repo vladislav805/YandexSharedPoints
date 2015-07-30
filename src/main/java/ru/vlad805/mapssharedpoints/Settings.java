@@ -7,7 +7,7 @@ public class Settings {
 	private boolean isTraffic = false;
 	private boolean isMyLocation = true;
 	private boolean isHD = true;
-	private int trackerInterval = 5;
+	private int trackerInterval = 10;
 	private Context context;
 	
 	public Settings (Context context) {
@@ -16,7 +16,7 @@ public class Settings {
 		isTraffic = Utils.getBoolean(context, Const.Settings.IS_TRAFFIC);
 		isMyLocation = Utils.getBoolean(context, Const.Settings.IS_LOCATION);
 		isHD = Utils.getBoolean(context, Const.Settings.IS_HD);
-		//trackerInterval = Utils.getInt(context, Const.Settings.TRACKER_INTERVAL);
+		trackerInterval = Utils.getInt(context, Const.Settings.TRACKER_INTERVAL);
 	}
 
 	public Settings setNight (boolean state) {
@@ -60,6 +60,7 @@ public class Settings {
 		Utils.setBoolean(context, Const.Settings.IS_TRAFFIC, isTraffic);
 		Utils.setBoolean(context, Const.Settings.IS_LOCATION, isMyLocation);
 		Utils.setBoolean(context, Const.Settings.IS_HD, isHD);
+		Utils.setInt(context, Const.Settings.TRACKER_INTERVAL, trackerInterval);
 		return this;
 	}
 }

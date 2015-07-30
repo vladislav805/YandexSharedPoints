@@ -44,6 +44,16 @@
 						android:id="@+id/settings_location"
 						style="@style/App.ItemCheckbox"
 						android:text="@string/SettingsLocation" />
+					<Spinner
+						android:entries="@array/settings_intervals"
+						android:id="@+id/settings_interval_translation"
+						android:layout_width="match_parent"
+						android:layout_height="55dp"
+						android:paddingLeft="14dp"
+						android:paddingBottom="8dp"
+						android:spinnerMode="dialog"
+						android:layout_marginRight="14dp">
+					</Spinner>
 				</LinearLayout>
 				<ScrollView
 					android:id="@+id/settings_profile"

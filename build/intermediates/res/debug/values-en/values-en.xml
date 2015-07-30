@@ -22,6 +22,17 @@
 		<item>was online</item>
 		<item>was online</item>
 	</string-array>
+    <string-array name="settings_intervals">
+		<item>As location</item>
+		<item>1 second</item>
+		<item>2 seconds</item>
+		<item>3 seconds</item>
+		<item>5 seconds</item>
+		<item>10 seconds</item>
+		<item>15 seconds</item>
+		<item>30 seconds</item>
+		<item>60 seconds</item>
+	</string-array>
     <!-- From: file:/E:/Android/Studio/YandexSharedPoints/yandexSharedPoints/src/main/res/values-en/strings.xml -->
     <eat-comment/>
     <string name="CreateDescription">Description</string>

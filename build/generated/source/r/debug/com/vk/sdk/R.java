@@ -46,22 +46,22 @@ public final class R {
 		public static final int vk_share_send_button_background = 0x7f020050;
 	}
 	public static final class id {
-		public static final int attachmentLinkLayout = 0x7f0d009c;
-		public static final int captchaAnswer = 0x7f0d0093;
-		public static final int captcha_container = 0x7f0d0090;
-		public static final int imageView = 0x7f0d0092;
-		public static final int imagesContainer = 0x7f0d009b;
-		public static final int imagesScrollView = 0x7f0d009a;
-		public static final int linkHost = 0x7f0d009e;
-		public static final int linkTitle = 0x7f0d009d;
-		public static final int postContentLayout = 0x7f0d0098;
-		public static final int postSettingsLayout = 0x7f0d009f;
-		public static final int progressBar = 0x7f0d0091;
-		public static final int sendButton = 0x7f0d0097;
-		public static final int sendButtonLayout = 0x7f0d0095;
-		public static final int sendProgress = 0x7f0d0096;
-		public static final int shareText = 0x7f0d0099;
-		public static final int topBarLayout = 0x7f0d0094;
+		public static final int attachmentLinkLayout = 0x7f0d009d;
+		public static final int captchaAnswer = 0x7f0d0094;
+		public static final int captcha_container = 0x7f0d0091;
+		public static final int imageView = 0x7f0d0093;
+		public static final int imagesContainer = 0x7f0d009c;
+		public static final int imagesScrollView = 0x7f0d009b;
+		public static final int linkHost = 0x7f0d009f;
+		public static final int linkTitle = 0x7f0d009e;
+		public static final int postContentLayout = 0x7f0d0099;
+		public static final int postSettingsLayout = 0x7f0d00a0;
+		public static final int progressBar = 0x7f0d0092;
+		public static final int sendButton = 0x7f0d0098;
+		public static final int sendButtonLayout = 0x7f0d0096;
+		public static final int sendProgress = 0x7f0d0097;
+		public static final int shareText = 0x7f0d009a;
+		public static final int topBarLayout = 0x7f0d0095;
 	}
 	public static final class layout {
 		public static final int vk_captcha_dialog = 0x7f030032;

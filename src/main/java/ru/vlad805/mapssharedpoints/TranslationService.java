@@ -15,7 +15,6 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.IBinder;
 import android.support.annotation.Nullable;
-import android.util.Log;
 
 import java.util.HashMap;
 import mjson.Json;
@@ -26,11 +25,11 @@ public class TranslationService extends Service implements LocationListener {
 	private Notification.Builder notification;
 	private TranslationItem current;
 	private Settings settings;
-	static StateService mState = StateService.IDLE;
+	public static boolean isStarted = false;
 	private Handler task;
 
-	static StateService getState () {
-		return mState;
+	static boolean getState () {
+		return isStarted;
 	}
 
 	public TranslationService getContext () {
@@ -40,14 +39,9 @@ public class TranslationService extends Service implements LocationListener {
 	@Override
 	public void onCreate() {
 		super.onCreate();
+		if (!isStarted) {
+			isStarted = true;
 
-	}
-
-
-	public int onStartCommand(Intent intent, int flags, int startId) {
-		if (mState == StateService.IDLE) {
-			mState = StateService.RUNNING;
-Log.e("ONSTARTCOMMAND", mState.toString());
 			settings = new Settings(this);
 			current = new TranslationItem();
 
@@ -58,6 +52,10 @@ Log.e("ONSTARTCOMMAND", mState.toString());
 		} else {
 			stopSelf();
 		}
+	}
+
+
+	public int onStartCommand(Intent intent, int flags, int startId) {
 		return super.onStartCommand(intent, flags, startId);
 	}
 
@@ -67,7 +65,7 @@ Log.e("ONSTARTCOMMAND", mState.toString());
 
 		stopForeground(true);
 		stopSelf();
-		mState = StateService.IDLE;
+		isStarted = !isStarted;
 	}
 
 	private void startTimer () {
@@ -78,12 +76,13 @@ Log.e("ONSTARTCOMMAND", mState.toString());
 	private Runnable taskSend = new Runnable() {
 		@Override
 		public void run() {
-			if (mState == StateService.IDLE) {
+			if (!isStarted) {
 				task = null;
 				return;
 			}
 			send();
-			task.postDelayed(taskSend, settings.getTrackerInterval() * 1000);
+			if (settings.getTrackerInterval() != Const.Settings.SEND_AS_LOCATION)
+				task.postDelayed(taskSend, settings.getTrackerInterval() * 1000);
 		}
 	};
 
@@ -99,6 +98,7 @@ Log.e("ONSTARTCOMMAND", mState.toString());
 		params.put(Const.BEARING, String.valueOf(current.bearing));
 		params.put(Const.TEMPERATURE, String.valueOf(current.temperature));
 		params.put(Const.PROVIDER, current.provider);
+		params.put(Const.NETWORK, current.network);
 		params.put(Const.TIME, String.valueOf(current.time));
 		params.put(Const.TIMEOUT, String.valueOf(current.timeout));
 
@@ -134,7 +134,7 @@ Log.e("ONSTARTCOMMAND", mState.toString());
 
 	private void createNotification () {
 		Intent notificationIntent = new Intent(this, TranslationActivity.class);
-		PendingIntent contentIntent = PendingIntent.getActivity(this, 0, notificationIntent, PendingIntent.FLAG_ONE_SHOT);
+		PendingIntent contentIntent = PendingIntent.getActivity(this, 0, notificationIntent, PendingIntent.FLAG_UPDATE_CURRENT);
 
 		notification = new Notification.Builder(this)
 				.setContentIntent(contentIntent)
@@ -143,6 +143,8 @@ Log.e("ONSTARTCOMMAND", mState.toString());
 				.setWhen(System.currentTimeMillis());
 
 		sendNotification();
+
+
 	}
 
 	private void initLocationListener () {
@@ -169,12 +171,14 @@ Log.e("ONSTARTCOMMAND", mState.toString());
 		current.bearing = location.getBearing();
 		current.speed = location.getSpeed();
 		current.provider = location.getProvider();
+		current.network = new InternetType(this).getTypeName();
 		current.time = System.currentTimeMillis() / 1000;
 		current.timeout = settings.getTrackerInterval();
 		if (settings.getTrackerInterval() == Const.Settings.SEND_AS_LOCATION) {
 			send();
 		}
 	}
+
 
 	@Override
 	public void onStatusChanged(String provider, int status, Bundle extras) {
